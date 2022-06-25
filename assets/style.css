@@ -1,0 +1,174 @@
+/* Todo fix that 
+@import "./assets/utils/mixins";
+@import "./assets/utils/variables";
+*/
+.body {
+  font-family: Roboto;
+  scroll-behavior: smooth;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.logo-container {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.logo-container__img {
+  max-width: 70%;
+  height: auto;
+}
+
+.location-container {
+  background-color: darkgray;
+  max-height: 75px;
+  min-height: 50px;
+  border-top: 3px solid rgba(15, 15, 15, 0.582);
+  width: 100%;
+  margin: auto;
+}
+.location-container_icon {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+.location-container__text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.header-baneer {
+  flex-wrap: wrap;
+  background-color: rgba(211, 211, 211, 0.15);
+  height: 250px;
+}
+.header-baneer__tittle {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.header-baneer__description {
+  font-weight: lighter;
+  font-size: 20px;
+  color: initial;
+  text-align: center;
+  margin-top: 0px;
+}
+.header-baneer__button {
+  background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
+  border-style: none;
+  width: 70%;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
+}
+
+.function-container {
+  display: flex;
+  align-items: center;
+  background-color: rgba(211, 211, 211, 0.15);
+  height: 60px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
+  width: 80%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.function-container__number {
+  margin-right: 10px;
+  margin-left: -7px;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: #9356DC;
+}
+.function-container__icon {
+  color: rgb(70, 70, 70);
+  margin-right: 20px;
+}
+
+.function-icon {
+  color: rgb(85, 84, 84);
+}
+
+.restaurant-container {
+  background-color: rgba(211, 211, 211, 0.15);
+  padding-bottom: 20px;
+}
+
+.restaurant-card {
+  border-radius: 25px;
+  height: 210px;
+  background-color: white;
+  box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+.restaurant-card__img {
+  overflow: hidden;
+  height: 150px;
+  border-radius: 25px 25px 0 0;
+}
+.restaurant-card__footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-description {
+  width: 70%;
+  margin-left: 20px;
+}
+.card-description__name {
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+}
+
+.footer-container {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.footer-link {
+  display: flex;
+  padding-bottom: 5px;
+  color: white;
+}
+.footer-link__icon {
+  color: white;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}/*# sourceMappingURL=style.css.map */

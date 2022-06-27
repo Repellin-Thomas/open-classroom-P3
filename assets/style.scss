@@ -125,6 +125,10 @@ $full-width: 100%;
     }
 }
 
+.function-title {
+    margin-left: 20px;
+}
+
 .function-container {
     display: flex;
     align-items: center;
@@ -158,6 +162,12 @@ $full-width: 100%;
 .restaurant-container {
     background-color: rgba(211, 211, 211, 0.150);
     padding-bottom: 20px;
+
+}
+
+.restaurant-title {
+    margin-left: 20px;
+    padding-top: 10px;
 }
 
 .restaurant-card {
@@ -167,11 +177,23 @@ $full-width: 100%;
     @include border-shadow;
     @include width-auto(80%);
     margin-top: 25px;
+    overflow: hidden;
 
     &__img {
         overflow: hidden;
         height: 150px;
         border-radius: 25px 25px 0 0;
+        position: relative;
+    }
+
+    &__sticker {
+        position: absolute;
+        color: black;
+        background-color: $tertiary-color;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 10px;
     }
 
     &__footer {

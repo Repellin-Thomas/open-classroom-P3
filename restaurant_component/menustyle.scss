@@ -1,0 +1,46 @@
+$full-width: 100%;
+
+
+
+@mixin width-auto ($width-size: $full-width) {
+    width: $width-size;
+    margin: auto;
+
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo-container {
+    @include flex-center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &__img {
+        max-width: 70%;
+        height: auto;
+        margin: auto;
+    }
+
+    &__icon {
+        justify-self: flex-start;
+    }
+}
+
+.header-baneer {
+    @include width-auto($full-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 300px;
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

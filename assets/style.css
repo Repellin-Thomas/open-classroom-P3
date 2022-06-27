@@ -71,6 +71,10 @@
   box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
 }
 
+.function-title {
+  margin-left: 20px;
+}
+
 .function-container {
   display: flex;
   align-items: center;
@@ -104,6 +108,11 @@
   padding-bottom: 20px;
 }
 
+.restaurant-title {
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
 .restaurant-card {
   border-radius: 25px;
   height: 210px;
@@ -112,11 +121,22 @@
   width: 80%;
   margin: auto;
   margin-top: 25px;
+  overflow: hidden;
 }
 .restaurant-card__img {
   overflow: hidden;
   height: 150px;
   border-radius: 25px 25px 0 0;
+  position: relative;
+}
+.restaurant-card__sticker {
+  position: absolute;
+  color: black;
+  background-color: #99E2D0;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 10px;
 }
 .restaurant-card__footer {
   width: 100%;

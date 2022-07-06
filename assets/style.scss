@@ -49,12 +49,21 @@ $full-width: 100%;
     color: $color;
 }
 
-.body {
+body {
     font-family: Roboto;
     scroll-behavior: smooth;
 }
 
 //Recurring-code
+
+a,
+a:hover,
+a:active,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+
+}
 
 .flex-center {
     display: flex;
@@ -122,6 +131,11 @@ $full-width: 100%;
         border-radius: 25px;
         @include border-shadow;
 
+        &:hover {
+            cursor: pointer;
+            box-shadow: 3px 3px 3px $secondary-color;
+        }
+
     }
 }
 
@@ -150,8 +164,17 @@ $full-width: 100%;
     }
 
     &__icon {
-        color: rgb(70, 70, 70);
-        margin-right: 20px;
+        margin-right: 15px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: #9256dc1c;
+
+        .function-icon {
+            color: $primary-color;
+        }
+
     }
 }
 
@@ -177,23 +200,15 @@ $full-width: 100%;
     @include border-shadow;
     @include width-auto(80%);
     margin-top: 25px;
-    overflow: hidden;
+    position: relative;
+
 
     &__img {
-        overflow: hidden;
+        width: 100%;
         height: 150px;
+        object-fit: cover;
         border-radius: 25px 25px 0 0;
-        position: relative;
-    }
 
-    &__sticker {
-        position: absolute;
-        color: black;
-        background-color: $tertiary-color;
-        top: 10px;
-        right: 10px;
-        width: 50px;
-        height: 10px;
     }
 
     &__footer {
@@ -205,9 +220,21 @@ $full-width: 100%;
 
 }
 
+.card-sticker {
+    position: absolute;
+    color: rgb(10, 112, 32);
+    font-weight: 600;
+    background-color: $tertiary-color;
+    top: 15px;
+    right: 15px;
+    width: 100px;
+    height: 30px;
+}
+
 .card-description {
     width: 70%;
     margin-left: 20px;
+
 
 
     &__name {
@@ -225,6 +252,15 @@ $full-width: 100%;
     width: 50px;
     height: 50px;
     margin-top: 5px;
+    transform: scale(1);
+
+
+    &:hover {
+        cursor: pointer;
+        color: #FF79DA;
+        transition: 2000ms;
+
+    }
 
 }
 

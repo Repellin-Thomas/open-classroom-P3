@@ -130,6 +130,8 @@ a:focus {
         height: 50px;
         border-radius: 25px;
         @include border-shadow;
+        color: white;
+        font-weight: 700;
 
         &:hover {
             cursor: pointer;
@@ -139,7 +141,15 @@ a:focus {
     }
 }
 
+.function-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .function-title {
+    width: 100%;
     margin-left: 20px;
 }
 
@@ -160,6 +170,8 @@ a:focus {
         height: 20px;
         width: 20px;
         background-color: $primary-color;
+        color: white;
+        font-weight: 500;
 
     }
 
@@ -176,6 +188,11 @@ a:focus {
         }
 
     }
+
+    &__description {
+        color: black;
+        font-weight: 700;
+    }
 }
 
 .function-icon {
@@ -191,6 +208,17 @@ a:focus {
 .restaurant-title {
     margin-left: 20px;
     padding-top: 10px;
+}
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    a {
+        width: 100%;
+    }
 }
 
 .restaurant-card {
@@ -255,7 +283,8 @@ a:focus {
     transform: scale(1);
 
 
-    &:hover {
+    &:hover,
+    :focus {
         cursor: pointer;
         color: #FF79DA;
         transition: 2000ms;
@@ -282,6 +311,7 @@ footer {
     margin-top: 10px;
     margin-bottom: 5px;
     color: white;
+    font-family: Shrikhand;
 }
 
 .footer-link {
@@ -294,5 +324,37 @@ footer {
         width: 20px;
         height: 20px;
         margin-right: 5px;
+    }
+}
+
+
+//Media queries 
+
+@media screen and (min-width: 768px) {
+
+    .header-baneer__button {
+        width: 30%;
+    }
+
+    .function-container {
+        width: 30%;
+    }
+
+    .cards-container {
+        a {
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header-baneer__button {
+        width: 20%;
+    }
+
+    .cards-container {
+        a {
+            width: 23%;
+        }
     }
 }

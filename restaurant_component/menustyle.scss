@@ -19,6 +19,11 @@ $full-width: 100%;
 
 }
 
+body {
+    font-family: Roboto;
+    scroll-behavior: smooth;
+}
+
 //header
 .logo-container {
     @include flex-center;
@@ -33,6 +38,11 @@ $full-width: 100%;
 
     &__icon {
         justify-self: flex-start;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
     }
 }
 
@@ -46,7 +56,6 @@ $full-width: 100%;
     &__image {
         width: 100%;
         height: auto;
-        object-fit: contain;
     }
 }
 
@@ -64,11 +73,23 @@ $full-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 15px 0px 15px
+
+    margin: 0px 15px 0px 15px;
+
+    &__title {
+        font-family: Shrikhand;
+    }
 }
 
 .food-section {
     @include width-auto($full-width);
+}
+
+.food-cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .food-card {
@@ -80,6 +101,12 @@ $full-width: 100%;
     border-radius: 20px;
     padding: 10px 15px 10px 15px;
     margin-bottom: 20px;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
+        transform: scale(1.1);
+    }
 }
 
 .food-title {
@@ -102,6 +129,13 @@ $full-width: 100%;
     height: 50px;
     border-radius: 25px;
     box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
+    color: white;
+    font-weight: 700;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 3px 3px 3px $primary-color;
+    }
 
 }
 
@@ -123,6 +157,7 @@ footer {
     margin-top: 10px;
     margin-bottom: 5px;
     color: white;
+    font-family: Shrikhand;
 }
 
 .footer-link {
@@ -135,5 +170,24 @@ footer {
         width: 20px;
         height: 20px;
         margin-right: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .food-card {
+        width: 60%;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+
+    .menu-container {
+        border-radius: unset;
+    }
+
+    .food-card {
+        width: 25%;
     }
 }

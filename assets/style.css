@@ -77,13 +77,23 @@ a:focus {
   height: 50px;
   border-radius: 25px;
   box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
+  color: white;
+  font-weight: 700;
 }
 .header-baneer__button:hover {
   cursor: pointer;
   box-shadow: 3px 3px 3px #FF79DA;
 }
 
+.function-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .function-title {
+  width: 100%;
   margin-left: 20px;
 }
 
@@ -105,6 +115,8 @@ a:focus {
   height: 20px;
   width: 20px;
   background-color: #9356DC;
+  color: white;
+  font-weight: 500;
 }
 .function-container__icon {
   margin-right: 15px;
@@ -115,6 +127,10 @@ a:focus {
 }
 .function-container:hover .function-icon {
   color: #9356DC;
+}
+.function-container__description {
+  color: black;
+  font-weight: 700;
 }
 
 .function-icon {
@@ -129,6 +145,16 @@ a:focus {
 .restaurant-title {
   margin-left: 20px;
   padding-top: 10px;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.cards-container a {
+  width: 100%;
 }
 
 .restaurant-card {
@@ -184,7 +210,8 @@ a:focus {
   margin-top: 5px;
   transform: scale(1);
 }
-.card-icon:hover {
+.card-icon:hover,
+.card-icon :focus {
   cursor: pointer;
   color: #FF79DA;
   transition: 2000ms;
@@ -206,6 +233,7 @@ footer {
   margin-top: 10px;
   margin-bottom: 5px;
   color: white;
+  font-family: Shrikhand;
 }
 
 .footer-link {
@@ -218,4 +246,27 @@ footer {
   width: 20px;
   height: 20px;
   margin-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-baneer__button {
+    width: 30%;
+  }
+
+  .function-container {
+    width: 30%;
+  }
+
+  .cards-container a {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header-baneer__button {
+    width: 20%;
+  }
+
+  .cards-container a {
+    width: 23%;
+  }
 }/*# sourceMappingURL=style.css.map */

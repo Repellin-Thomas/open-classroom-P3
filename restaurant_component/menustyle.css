@@ -1,3 +1,8 @@
+body {
+  font-family: Roboto;
+  scroll-behavior: smooth;
+}
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -12,6 +17,10 @@
 .logo-container__icon {
   justify-self: flex-start;
 }
+.logo-container__icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
 
 .header-baneer {
   width: 100%;
@@ -24,8 +33,6 @@
 .header-baneer__image {
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .menu-container {
@@ -41,10 +48,20 @@
   justify-content: space-between;
   margin: 0px 15px 0px 15px;
 }
+.menu-header__title {
+  font-family: Shrikhand;
+}
 
 .food-section {
   width: 100%;
   margin: auto;
+}
+
+.food-cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .food-card {
@@ -57,6 +74,11 @@
   border-radius: 20px;
   padding: 10px 15px 10px 15px;
   margin-bottom: 20px;
+}
+.food-card:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
+  transform: scale(1.1);
 }
 
 .food-title {
@@ -79,6 +101,12 @@
   height: 50px;
   border-radius: 25px;
   box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
+  color: white;
+  font-weight: 700;
+}
+.order-button:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 3px #9356DC;
 }
 
 .footer-container {
@@ -97,6 +125,7 @@ footer {
   margin-top: 10px;
   margin-bottom: 5px;
   color: white;
+  font-family: Shrikhand;
 }
 
 .footer-link {
@@ -109,4 +138,19 @@ footer {
   width: 20px;
   height: 20px;
   margin-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .food-card {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-container {
+    border-radius: unset;
+  }
+
+  .food-card {
+    width: 25%;
+  }
 }/*# sourceMappingURL=menustyle.css.map */

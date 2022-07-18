@@ -54,6 +54,7 @@ body {
     scroll-behavior: smooth;
 }
 
+
 //Recurring-code
 
 a,
@@ -76,6 +77,52 @@ a:focus {
 }
 
 //code
+
+.loader-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    border: 4.5px solid #0000;
+    border-radius: 50%;
+    border-color: #ff79da #0000;
+    animation: spinner-e04l1k 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2.2px;
+    border: inherit;
+    border-radius: 50%;
+}
+
+.spinner::before {
+    border-color: #9356dc #0000;
+    animation: inherit;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+}
+
+.spinner::after {
+    margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
 .logo-container {
     @include width-auto;
     margin-bottom: 20px;
@@ -244,9 +291,44 @@ a:focus {
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
+        position: relative;
 
+        i {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            right: 5px;
+
+        }
+
+        .filled-heart {
+            color: transparent;
+            background: linear-gradient($secondary-color 0%, $primary-color 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+                transition: 3000ms;
+            }
+        }
+
+        .empty-heart {
+            opacity: 1;
+
+            &:hover {
+                opacity: 0;
+                transition: 3000ms;
+            }
+        }
+    }
 }
+
+
+
 
 .card-sticker {
     position: absolute;
@@ -268,6 +350,8 @@ a:focus {
     &__name {
         margin-top: 5px;
         margin-bottom: 3px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
 
@@ -280,18 +364,11 @@ a:focus {
     width: 50px;
     height: 50px;
     margin-top: 5px;
-    transform: scale(1);
 
 
-    &:hover,
-    :focus {
-        cursor: pointer;
-        color: #FF79DA;
-        transition: 2000ms;
-
-    }
 
 }
+
 
 
 //footer
@@ -325,6 +402,15 @@ footer {
         height: 20px;
         margin-right: 5px;
     }
+
+    &:hover {
+        cursor: pointer;
+        color: black;
+
+        .footer-link__icon {
+            color: black;
+        }
+    }
 }
 
 
@@ -352,9 +438,4 @@ footer {
         width: 20%;
     }
 
-    .cards-container {
-        a {
-            width: 23%;
-        }
-    }
 }

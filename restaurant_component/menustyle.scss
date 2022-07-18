@@ -19,6 +19,13 @@ $full-width: 100%;
 
 }
 
+@mixin text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
 body {
     font-family: Roboto;
     scroll-behavior: smooth;
@@ -83,6 +90,13 @@ body {
 
 .food-section {
     @include width-auto($full-width);
+
+    h2 {
+        font-size: 18px;
+        font-weight: 100;
+        margin-left: 10px;
+    }
+
 }
 
 .food-cards-container {
@@ -94,25 +108,73 @@ body {
 
 .food-card {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     @include width-auto(90%);
+    @include text-ellipsis;
     background-color: white;
     border-radius: 20px;
-    padding: 10px 15px 10px 15px;
     margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
+
+
+    &__description {
+        @include text-ellipsis;
+        width: 70%;
+        padding: 10px;
+
+
+        .food-title {
+            @include text-ellipsis;
+            margin-top: 0px;
+            margin-bottom: 5px;
+
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        margin-left: auto;
+        font-weight: bold;
+        padding: 10px;
+
+    }
+
+    &__ordered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: -60px;
+        border-radius: 0 20px 20px 0;
+        width: 60px;
+        background-color: $tertiary-color;
+    }
+
+    .check-icon {
+        color: white;
+    }
 
     &:hover {
         cursor: pointer;
-        box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
-        transform: scale(1.1);
+        box-shadow: 3px 3px 3 px rgba(211, 211, 211, 0.315);
     }
+
+    &:hover .food-card__ordered {
+        margin-right: 0px;
+        transition: 300ms;
+    }
+
+    &:hover .check-icon {
+
+        transform: rotate(360deg);
+        transition: 500ms;
+
+    }
+
 }
 
-.food-title {
-    margin-top: 0px;
-    margin-bottom: 5px;
-}
+
+
 
 
 .order {
@@ -171,6 +233,15 @@ footer {
         height: 20px;
         margin-right: 5px;
     }
+
+    &:hover {
+        cursor: pointer;
+        color: black;
+
+        .footer-link__icon {
+            color: black;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -188,6 +259,6 @@ footer {
     }
 
     .food-card {
-        width: 25%;
+        width: 30%;
     }
 }

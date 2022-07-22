@@ -251,14 +251,11 @@ a:focus {
 }
 .restaurant-card__footer .filled-heart:hover {
   opacity: 1;
-  transition: 3000ms;
-}
-.restaurant-card__footer .empty-heart {
-  opacity: 1;
+  transition: 1500ms;
 }
 .restaurant-card__footer .empty-heart:hover {
   opacity: 0;
-  transition: 3000ms;
+  transition: 1500ms;
 }
 
 .card-sticker {

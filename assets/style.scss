@@ -312,16 +312,16 @@ a:focus {
 
             &:hover {
                 opacity: 1;
-                transition: 3000ms;
+                transition: 1500ms;
             }
         }
 
         .empty-heart {
-            opacity: 1;
+
 
             &:hover {
                 opacity: 0;
-                transition: 3000ms;
+                transition: 1500ms;
             }
         }
     }

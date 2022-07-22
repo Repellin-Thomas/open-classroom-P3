@@ -47,6 +47,124 @@ body {
   scroll-behavior: smooth;
 }
 
+.loader-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  -webkit-animation: loader-duration 1000ms;
+          animation: loader-duration 1000ms;
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes loader-duration {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loader-duration {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.loading-logo {
+  position: absolute;
+  top: 50%;
+  -webkit-animation: logo-scale 300ms;
+          animation: logo-scale 300ms;
+}
+@-webkit-keyframes logo-scale {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes logo-scale {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  border-color: #ff79da rgba(0, 0, 0, 0);
+  -webkit-animation: spinner-e04l1k 1s infinite linear;
+          animation: spinner-e04l1k 1s infinite linear;
+  margin-bottom: 150px;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.spinner::before {
+  border-color: #9356dc rgba(0, 0, 0, 0);
+  -webkit-animation: inherit;
+          animation: inherit;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.spinner::after {
+  margin: 8.9px;
+}
+
+@-webkit-keyframes spinner-e04l1k {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spinner-e04l1k {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
 header {
   width: 100%;
   position: relative;
@@ -158,20 +276,20 @@ main {
 .food-card.delay1 {
   -webkit-animation: puff-in-top 1s;
   animation: puff-in-top 1s;
-  -webkit-animation-delay: 0ms;
-          animation-delay: 0ms;
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms;
 }
 .food-card.delay2 {
   -webkit-animation: puff-in-top 1s;
   animation: puff-in-top 1s;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  -webkit-animation-delay: 3300ms;
+          animation-delay: 3300ms;
 }
 .food-card.delay3 {
   -webkit-animation: puff-in-top 1s;
   animation: puff-in-top 1s;
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
+  -webkit-animation-delay: 3600ms;
+          animation-delay: 3600ms;
 }
 .food-card__description {
   overflow: hidden;
@@ -198,9 +316,6 @@ main {
   padding: 10px;
 }
 .food-card__ordered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-right: -60px;
   border-radius: 0 20px 20px 0;
   width: 60px;

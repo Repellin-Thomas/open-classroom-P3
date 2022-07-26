@@ -91,18 +91,18 @@ body {
 }
 @-webkit-keyframes logo-scale {
   0% {
-    scale: 0;
+    transform: scale(0);
   }
   100% {
-    scale: 1;
+    transform: scale(1);
   }
 }
 @keyframes logo-scale {
   0% {
-    scale: 0;
+    transform: scale(0);
   }
   100% {
-    scale: 1;
+    transform: scale(1);
   }
 }
 
@@ -169,6 +169,7 @@ header {
   width: 100%;
   position: relative;
   z-index: 0;
+  margin-top: 10px;
 }
 
 .logo-container {
@@ -184,6 +185,7 @@ header {
 }
 .logo-container__icon {
   justify-self: flex-start;
+  margin-left: 20px;
 }
 .logo-container__icon:hover {
   cursor: pointer;
@@ -275,19 +277,19 @@ main {
 }
 .food-card.delay1 {
   -webkit-animation: puff-in-top 1s;
-  animation: puff-in-top 1s;
+          animation: puff-in-top 1s;
   -webkit-animation-delay: 3000ms;
           animation-delay: 3000ms;
 }
 .food-card.delay2 {
   -webkit-animation: puff-in-top 1s;
-  animation: puff-in-top 1s;
+          animation: puff-in-top 1s;
   -webkit-animation-delay: 3300ms;
           animation-delay: 3300ms;
 }
 .food-card.delay3 {
   -webkit-animation: puff-in-top 1s;
-  animation: puff-in-top 1s;
+          animation: puff-in-top 1s;
   -webkit-animation-delay: 3600ms;
           animation-delay: 3600ms;
 }
@@ -326,7 +328,7 @@ main {
 }
 .food-card:hover {
   cursor: pointer;
-  box-shadow: 3px 3px 3 px rgba(211, 211, 211, 0.315);
+  box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
 }
 .food-card:hover .food-card__ordered {
   margin-right: 0px;
@@ -402,12 +404,18 @@ footer {
   .food-card {
     width: 60%;
   }
+  .order-button {
+    width: 30%;
+  }
 }
 @media screen and (min-width: 992px) {
   .menu-container {
     border-radius: unset;
   }
   .food-card {
-    width: 30%;
+    width: 20%;
+  }
+  .order-button {
+    width: 20%;
   }
 }/*# sourceMappingURL=menustyle.css.map */

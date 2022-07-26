@@ -1,3 +1,9 @@
+@import "../7.1/variables";
+@import "../7.1/mixins";
+
+
+
+
 //variables
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
@@ -107,12 +113,12 @@ a:focus {
 
     @keyframes logo-scale {
         0% {
-            scale: 0;
+            transform: scale(0);
 
         }
 
         100% {
-            scale: 1;
+            transform: scale(1);
 
         }
 
@@ -163,6 +169,7 @@ a:focus {
 .logo-container {
     @include width-auto;
     margin-bottom: 20px;
+    margin-top: 10px;
 
     &__img {
         max-width: 70%;

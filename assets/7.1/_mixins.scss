@@ -1,0 +1,66 @@
+@import "./variables";
+
+
+//mixins
+
+@mixin text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+@mixin puffin-card ($delay: 3000ms) {
+    animation: puff-in-top 1s;
+    animation-delay: $delay;
+
+}
+
+
+//Size and shape mixins
+@mixin size-scaling {
+    max-width: 100%;
+    height: auto;
+
+}
+
+@mixin width-auto ($width-size: $full-width) {
+    width: $width-size;
+    margin: auto;
+
+}
+
+@mixin icon-size {
+    width: 50px;
+    height: 50px;
+
+}
+
+
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+
+}
+
+//Color and style mixins
+
+@mixin background-primary {
+    background-color: $primary-color;
+}
+
+@mixin background-tertiary {
+    background-color: $tertiary-color;
+}
+
+@mixin border-shadow {
+    box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
+
+}
+
+@mixin text-style ($font-weight: initial, $fontsize: initial, $color: initial) {
+    font-weight: $font-weight;
+    font-size: $fontsize;
+    color: $color;
+}

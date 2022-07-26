@@ -65,18 +65,18 @@ a:focus {
 }
 @-webkit-keyframes logo-scale {
   0% {
-    scale: 0;
+    transform: scale(0);
   }
   100% {
-    scale: 1;
+    transform: scale(1);
   }
 }
 @keyframes logo-scale {
   0% {
-    scale: 0;
+    transform: scale(0);
   }
   100% {
-    scale: 1;
+    transform: scale(1);
   }
 }
 
@@ -129,6 +129,7 @@ a:focus {
   width: 100%;
   margin: auto;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 .logo-container__img {
   max-width: 70%;

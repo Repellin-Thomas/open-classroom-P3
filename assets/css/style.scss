@@ -1,55 +1,6 @@
 @import "../7.1/variables";
 @import "../7.1/mixins";
 
-
-
-
-//variables
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$full-width: 100%;
-
-//Size and shape mixins
-@mixin size-scaling {
-    max-width: 100%;
-    height: auto;
-
-}
-
-@mixin width-auto ($width-size: $full-width) {
-    width: $width-size;
-    margin: auto;
-
-}
-
-@mixin icon-size {
-    width: 50px;
-    height: 50px;
-
-}
-
-//Color and style mixins
-
-@mixin background-primary {
-    background-color: $primary-color;
-}
-
-@mixin background-tertiary {
-    background-color: $tertiary-color;
-}
-
-@mixin border-shadow {
-    box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
-
-}
-
-@mixin text-style ($font-weight: initial, $fontsize: initial, $color: initial) {
-    font-weight: $font-weight;
-    font-size: $fontsize;
-    color: $color;
-}
-
 body {
     font-family: Roboto;
     scroll-behavior: smooth;

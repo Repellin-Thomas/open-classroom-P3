@@ -7,5 +7,8 @@
     "sass": "sass --watch ./assets/style.scss:./assets/style.css"
   },
   "author": "Trepellin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }

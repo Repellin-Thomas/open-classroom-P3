@@ -194,7 +194,7 @@ a:focus {
 }
 
 .function-title {
-  width: 100%;
+  width: 90%;
   margin-left: 20px;
 }
 
@@ -380,7 +380,7 @@ footer {
     width: 30%;
   }
   .function-container {
-    width: 30%;
+    width: 25%;
   }
   .cards-container a {
     width: 45%;

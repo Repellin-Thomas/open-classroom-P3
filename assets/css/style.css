@@ -183,6 +183,7 @@ a:focus {
 }
 .header-baneer__button:hover {
   cursor: pointer;
+  opacity: 0.95;
   box-shadow: 3px 3px 3px #FF79DA;
 }
 
@@ -255,6 +256,9 @@ a:focus {
   flex-wrap: wrap;
 }
 .cards-container a {
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 400px;
   width: 100%;
 }
 
@@ -377,17 +381,18 @@ footer {
 
 @media screen and (min-width: 768px) {
   .header-baneer__button {
-    width: 30%;
+    width: 250px;
   }
   .function-container {
     width: 25%;
   }
   .cards-container a {
     width: 45%;
+    max-width: 350px;
   }
 }
 @media screen and (min-width: 992px) {
   .header-baneer__button {
-    width: 20%;
+    width: 250px;
   }
 }/*# sourceMappingURL=style.css.map */

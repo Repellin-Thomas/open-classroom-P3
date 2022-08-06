@@ -174,7 +174,7 @@ a:focus {
 .header-baneer__button {
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
   border-style: none;
-  width: 70%;
+  width: 250px;
   height: 50px;
   border-radius: 25px;
   box-shadow: 3px 3px 3px rgba(211, 211, 211, 0.315);
@@ -183,8 +183,8 @@ a:focus {
 }
 .header-baneer__button:hover {
   cursor: pointer;
-  opacity: 0.95;
-  box-shadow: 3px 3px 3px #FF79DA;
+  opacity: 0.8;
+  box-shadow: 3px 3px 3px #9356DC;
 }
 
 .function-section {

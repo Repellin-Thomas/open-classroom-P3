@@ -168,7 +168,7 @@ a:focus {
     &__button {
         background: linear-gradient(170deg, $secondary-color 0%, $primary-color 100%);
         border-style: none;
-        width: 70%;
+        width: 250px;
         height: 50px;
         border-radius: 25px;
         @include border-shadow;
@@ -177,8 +177,8 @@ a:focus {
 
         &:hover {
             cursor: pointer;
-            opacity: 0.95;
-            box-shadow: 3px 3px 3px $secondary-color;
+            opacity: 0.80;
+            box-shadow: 3px 3px 3px $primary-color;
         }
 
     }
